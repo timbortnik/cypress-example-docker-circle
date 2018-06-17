@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
       # the Docker image with Cypress dependencies
-      - image: cypress/base:8
+      - image: cypress/base:6
         environment:
           ## this enables colors in the output
           TERM: xterm
@@ -14,11 +14,12 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - cache-dirs
-      - run: npm ci
+            - v1-npm-deps-{{ checksum "package.json" }}
+      - run: npm install
       - save_cache:
-          key: cache-dirs
+          key: v1-npm-deps-{{ checksum "package.json" }}
           paths:
+            - node_modules
             - ~/.npm
             - ~/.cache
       - run:
