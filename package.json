@@ -1,6 +1,6 @@
 {
   "name": "cypress-example-docker-circle",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Cypress + Docker + CircleCI = ❤️",
   "main": "index.js",
   "private": true,
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tbortnyk/cypress-example-docker-circle.git"
+    "url": "git+https://github.com/timbortnik/cypress-example-docker-circle.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tbortnyk/cypress-example-docker-circle/issues"
+    "url": "https://github.com/timbortnik/cypress-example-docker-circle/issues"
   },
-  "homepage": "https://github.com/tbortnyk/cypress-example-docker-circle#readme",
+  "homepage": "https://github.com/timbortnik/cypress-example-docker-circle#readme",
   "devDependencies": {
     "chai-colors": "^1.0.1",
     "cypress": "^3.0.1",
