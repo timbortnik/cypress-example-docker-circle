@@ -3,23 +3,27 @@ chai.use(chaiColors)
 
 describe('a-spec', () => {
   describe('page', () => {
-    beforeEach(() => {
+    before(() => {
       debugger
-      cy.visit(Cypress.env('HOST') || 'index.html')
+      cy.visit(Cypress.env('HOST') || '/')
     })
 
-    it('has h2', () => {
-      cy.contains('h2', 'A test')
+    it('has navbar', () => {
+      cy.contains('.navbar', 'cypress.io')
+    })
+
+    it('has banner', () => {
+      cy.contains('.banner', 'Kitchen Sink')
+    })
+
+    it('banner text color is green', () => {
+      cy.get('.banner')
+        .should('have.css', 'background-color')
+        .and('be.colored', '#00bf88')
     })
 
     it('has paragraph', () => {
       cy.contains('p')
-    })
-
-    it('paragraph text color', () => {
-      cy.contains('p')
-        .should('have.css', 'color')
-        .and('be.colored', 'rgb(0, 0, 255)')
     })
   })
 })
