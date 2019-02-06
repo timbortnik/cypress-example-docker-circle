@@ -2,5 +2,5 @@
 
 > Cypress + Docker + CircleCI = ❤️
 
-See test runs for this example at
+See test runs for this example at:
 [circleci.com](https://circleci.com/gh/timbortnik/cypress-example-docker-circle)
